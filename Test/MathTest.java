@@ -1,8 +1,11 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.Mockito.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class MathTest {
 
@@ -18,16 +21,13 @@ public class MathTest {
         assertEquals("13", a);
     }
 
-    /**
+
     @Test
     void divisionTest(){
-        double a = Math.division(4,8);
 
-        assertEquals("divisor cannot be zero", b);
-
-        assertEquals(0.5, a);
+        assertThrows(IllegalArgumentException.class, () -> Math.division(4, 0));
     }
-    */
+
 
     @Test
     void getRandomNumberTest(){

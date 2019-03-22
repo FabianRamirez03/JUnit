@@ -16,7 +16,7 @@ public class Math {
 
     static double division(int a, int b){
         if (b == 0){
-            throw new IllegalArgumentException("divisor cannot be zero");
+            throw new IllegalArgumentException("Divisor cannot be zero");
         }
         return a/b;
     }
