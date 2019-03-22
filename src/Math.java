@@ -8,7 +8,8 @@ public class Math {
 
     static String stringAddition(String a, String b){
 
-        return a + b;
+        int result = Integer.parseInt(a)+Integer.parseInt(b);
+        return Integer.toString(result);
 
     }
 
